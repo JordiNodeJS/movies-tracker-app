@@ -1,0 +1,96 @@
+{
+    "common": {
+        "appName": "Movies Tracker",
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "retry": "Try again",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "close": "Close",
+        "search": "Search",
+        "noResults": "No results found"
+    },
+    "nav": {
+        "home": "Home",
+        "search": "Search",
+        "watchlist": "Watchlist",
+        "trending": "Trending",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "profile": "Profile"
+    },
+    "home": {
+        "hero": {
+            "title": "Discover Your Next Favorite Movie",
+            "subtitle": "Track, rate, and explore thousands of movies"
+        },
+        "trending": "Trending Now",
+        "popular": "Popular Movies",
+        "topRated": "Top Rated",
+        "upcoming": "Coming Soon",
+        "nowPlaying": "Now Playing"
+    },
+    "movie": {
+        "overview": "Overview",
+        "cast": "Cast",
+        "crew": "Crew",
+        "director": "Director",
+        "runtime": "Runtime",
+        "releaseDate": "Release Date",
+        "rating": "Rating",
+        "userRating": "Your Rating",
+        "budget": "Budget",
+        "revenue": "Revenue",
+        "genres": "Genres",
+        "recommendations": "Recommended",
+        "similar": "Similar Movies",
+        "addToWatchlist": "Add to Watchlist",
+        "removeFromWatchlist": "Remove from Watchlist",
+        "inWatchlist": "In Your Watchlist",
+        "minutes": "min",
+        "notRated": "Not rated yet"
+    },
+    "watchlist": {
+        "title": "My Watchlist",
+        "empty": "Your watchlist is empty",
+        "emptyDescription": "Start adding movies to keep track of what you want to watch",
+        "addedOn": "Added on",
+        "remove": "Remove"
+    },
+    "search": {
+        "title": "Search Movies",
+        "placeholder": "Search for movies...",
+        "results": "Results for",
+        "noResults": "No movies found for",
+        "tryDifferent": "Try a different search term"
+    },
+    "auth": {
+        "login": "Login",
+        "register": "Create Account",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "name": "Name",
+        "forgotPassword": "Forgot password?",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?",
+        "loginSuccess": "Welcome back!",
+        "registerSuccess": "Account created successfully",
+        "loginError": "Invalid email or password",
+        "registerError": "Failed to create account",
+        "passwordMismatch": "Passwords don't match",
+        "loginRequired": "Please login to continue"
+    },
+    "theme": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+    },
+    "footer": {
+        "poweredBy": "Powered by TMDB",
+        "allRightsReserved": "All rights reserved"
+    }
+}

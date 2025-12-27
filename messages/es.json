@@ -1,0 +1,96 @@
+{
+    "common": {
+        "appName": "Movies Tracker",
+        "loading": "Cargando...",
+        "error": "Algo salió mal",
+        "retry": "Intentar de nuevo",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "close": "Cerrar",
+        "search": "Buscar",
+        "noResults": "No se encontraron resultados"
+    },
+    "nav": {
+        "home": "Inicio",
+        "search": "Buscar",
+        "watchlist": "Mi Lista",
+        "trending": "Tendencias",
+        "login": "Iniciar Sesión",
+        "register": "Registrarse",
+        "logout": "Cerrar Sesión",
+        "profile": "Perfil"
+    },
+    "home": {
+        "hero": {
+            "title": "Descubre Tu Próxima Película Favorita",
+            "subtitle": "Sigue, califica y explora miles de películas"
+        },
+        "trending": "Tendencias",
+        "popular": "Películas Populares",
+        "topRated": "Mejor Valoradas",
+        "upcoming": "Próximamente",
+        "nowPlaying": "En Cartelera"
+    },
+    "movie": {
+        "overview": "Sinopsis",
+        "cast": "Reparto",
+        "crew": "Equipo",
+        "director": "Director",
+        "runtime": "Duración",
+        "releaseDate": "Fecha de Estreno",
+        "rating": "Calificación",
+        "userRating": "Tu Calificación",
+        "budget": "Presupuesto",
+        "revenue": "Recaudación",
+        "genres": "Géneros",
+        "recommendations": "Recomendadas",
+        "similar": "Películas Similares",
+        "addToWatchlist": "Añadir a Mi Lista",
+        "removeFromWatchlist": "Quitar de Mi Lista",
+        "inWatchlist": "En Tu Lista",
+        "minutes": "min",
+        "notRated": "Sin calificar"
+    },
+    "watchlist": {
+        "title": "Mi Lista",
+        "empty": "Tu lista está vacía",
+        "emptyDescription": "Empieza a añadir películas para llevar un seguimiento de lo que quieres ver",
+        "addedOn": "Añadida el",
+        "remove": "Quitar"
+    },
+    "search": {
+        "title": "Buscar Películas",
+        "placeholder": "Buscar películas...",
+        "results": "Resultados para",
+        "noResults": "No se encontraron películas para",
+        "tryDifferent": "Prueba con otro término de búsqueda"
+    },
+    "auth": {
+        "login": "Iniciar Sesión",
+        "register": "Crear Cuenta",
+        "email": "Correo Electrónico",
+        "password": "Contraseña",
+        "confirmPassword": "Confirmar Contraseña",
+        "name": "Nombre",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "noAccount": "¿No tienes cuenta?",
+        "hasAccount": "¿Ya tienes cuenta?",
+        "loginSuccess": "¡Bienvenido de nuevo!",
+        "registerSuccess": "Cuenta creada exitosamente",
+        "loginError": "Email o contraseña inválidos",
+        "registerError": "Error al crear la cuenta",
+        "passwordMismatch": "Las contraseñas no coinciden",
+        "loginRequired": "Por favor inicia sesión para continuar"
+    },
+    "theme": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+    },
+    "footer": {
+        "poweredBy": "Desarrollado con TMDB",
+        "allRightsReserved": "Todos los derechos reservados"
+    }
+}

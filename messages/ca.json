@@ -1,0 +1,96 @@
+{
+    "common": {
+        "appName": "Movies Tracker",
+        "loading": "Carregant...",
+        "error": "Alguna cosa ha anat malament",
+        "retry": "Tornar a intentar",
+        "save": "Desar",
+        "cancel": "Cancel·lar",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "close": "Tancar",
+        "search": "Cercar",
+        "noResults": "No s'han trobat resultats"
+    },
+    "nav": {
+        "home": "Inici",
+        "search": "Cercar",
+        "watchlist": "La Meva Llista",
+        "trending": "Tendències",
+        "login": "Iniciar Sessió",
+        "register": "Registrar-se",
+        "logout": "Tancar Sessió",
+        "profile": "Perfil"
+    },
+    "home": {
+        "hero": {
+            "title": "Descobreix La Teva Pròxima Pel·lícula Favorita",
+            "subtitle": "Segueix, qualifica i explora milers de pel·lícules"
+        },
+        "trending": "Tendències",
+        "popular": "Pel·lícules Populars",
+        "topRated": "Millor Valorades",
+        "upcoming": "Properament",
+        "nowPlaying": "En Cartellera"
+    },
+    "movie": {
+        "overview": "Sinopsi",
+        "cast": "Repartiment",
+        "crew": "Equip",
+        "director": "Director",
+        "runtime": "Durada",
+        "releaseDate": "Data d'Estrena",
+        "rating": "Qualificació",
+        "userRating": "La Teva Qualificació",
+        "budget": "Pressupost",
+        "revenue": "Recaptació",
+        "genres": "Gèneres",
+        "recommendations": "Recomanades",
+        "similar": "Pel·lícules Similars",
+        "addToWatchlist": "Afegir a La Meva Llista",
+        "removeFromWatchlist": "Treure de La Meva Llista",
+        "inWatchlist": "A La Teva Llista",
+        "minutes": "min",
+        "notRated": "Sense qualificar"
+    },
+    "watchlist": {
+        "title": "La Meva Llista",
+        "empty": "La teva llista és buida",
+        "emptyDescription": "Comença a afegir pel·lícules per fer un seguiment del que vols veure",
+        "addedOn": "Afegida el",
+        "remove": "Treure"
+    },
+    "search": {
+        "title": "Cercar Pel·lícules",
+        "placeholder": "Cercar pel·lícules...",
+        "results": "Resultats per a",
+        "noResults": "No s'han trobat pel·lícules per a",
+        "tryDifferent": "Prova amb un altre terme de cerca"
+    },
+    "auth": {
+        "login": "Iniciar Sessió",
+        "register": "Crear Compte",
+        "email": "Correu Electrònic",
+        "password": "Contrasenya",
+        "confirmPassword": "Confirmar Contrasenya",
+        "name": "Nom",
+        "forgotPassword": "Has oblidat la contrasenya?",
+        "noAccount": "No tens compte?",
+        "hasAccount": "Ja tens compte?",
+        "loginSuccess": "Benvingut de nou!",
+        "registerSuccess": "Compte creat correctament",
+        "loginError": "Email o contrasenya invàlids",
+        "registerError": "Error en crear el compte",
+        "passwordMismatch": "Les contrasenyes no coincideixen",
+        "loginRequired": "Si us plau, inicia sessió per continuar"
+    },
+    "theme": {
+        "light": "Clar",
+        "dark": "Fosc",
+        "system": "Sistema"
+    },
+    "footer": {
+        "poweredBy": "Desenvolupat amb TMDB",
+        "allRightsReserved": "Tots els drets reservats"
+    }
+}
