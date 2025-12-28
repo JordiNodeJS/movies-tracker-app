@@ -3,7 +3,7 @@
 import { prisma } from "./prisma";
 import { verifyJWT } from "./auth-utils";
 import { getAuthToken } from "./auth-actions";
-import { revalidatePath, revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 
 export type User = {
   id: string;
@@ -74,7 +74,6 @@ export async function addToWatchlist(
     });
 
     revalidatePath("/watchlist");
-    revalidateTag("watchlist");
 
     return { success: true };
   } catch (error) {
@@ -108,7 +107,6 @@ export async function removeFromWatchlist(
     });
 
     revalidatePath("/watchlist");
-    revalidateTag("watchlist");
 
     return { success: true };
   } catch (error) {

@@ -1,11 +1,7 @@
 import "server-only";
-import {
-  unstable_cacheLife as cacheLife,
-  unstable_cacheTag as cacheTag,
-} from "next/cache";
+import { unstable_cache } from "next/cache";
 
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
-const TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p";
 
 const ACCESS_TOKEN = process.env.TMDB_ACCESS_TOKEN;
 
@@ -99,120 +95,103 @@ async function tmdbFetch<T>(
   return response.json();
 }
 
-export function getImageUrl(
-  path: string | null,
-  size: "w92" | "w154" | "w185" | "w342" | "w500" | "w780" | "original" = "w500"
-): string {
-  if (!path) {
-    return "/placeholder-movie.png";
-  }
-  return `${TMDB_IMAGE_BASE}/${size}${path}`;
-}
-
-export function getBackdropUrl(
-  path: string | null,
-  size: "w300" | "w780" | "w1280" | "original" = "w1280"
-): string {
-  if (!path) {
-    return "/placeholder-backdrop.png";
-  }
-  return `${TMDB_IMAGE_BASE}/${size}${path}`;
-}
-
 // API Functions with caching
-export async function getTrendingMovies(
-  locale: string = "en",
-  timeWindow: "day" | "week" = "week"
-): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("trending");
-  cacheTag("trending");
+export const getTrendingMovies = unstable_cache(
+  async (
+    locale: string = "en",
+    timeWindow: "day" | "week" = "week"
+  ): Promise<PaginatedResponse<Movie>> => {
+    return tmdbFetch<PaginatedResponse<Movie>>(
+      `/trending/movie/${timeWindow}`,
+      {
+        language: locale,
+      }
+    );
+  },
+  ["trending"],
+  { revalidate: 3600, tags: ["trending"] }
+);
 
-  return tmdbFetch<PaginatedResponse<Movie>>(`/trending/movie/${timeWindow}`, {
-    language: locale,
-  });
-}
+export const getPopularMovies = unstable_cache(
+  async (
+    locale: string = "en",
+    page: number = 1
+  ): Promise<PaginatedResponse<Movie>> => {
+    return tmdbFetch<PaginatedResponse<Movie>>("/movie/popular", {
+      language: locale,
+      page: String(page),
+    });
+  },
+  ["popular"],
+  { revalidate: 3600, tags: ["popular"] }
+);
 
-export async function getPopularMovies(
-  locale: string = "en",
-  page: number = 1
-): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("trending");
-  cacheTag("popular");
+export const getTopRatedMovies = unstable_cache(
+  async (
+    locale: string = "en",
+    page: number = 1
+  ): Promise<PaginatedResponse<Movie>> => {
+    return tmdbFetch<PaginatedResponse<Movie>>("/movie/top_rated", {
+      language: locale,
+      page: String(page),
+    });
+  },
+  ["top-rated"],
+  { revalidate: 3600, tags: ["top-rated"] }
+);
 
-  return tmdbFetch<PaginatedResponse<Movie>>("/movie/popular", {
-    language: locale,
-    page: String(page),
-  });
-}
+export const getNowPlayingMovies = unstable_cache(
+  async (
+    locale: string = "en",
+    page: number = 1
+  ): Promise<PaginatedResponse<Movie>> => {
+    return tmdbFetch<PaginatedResponse<Movie>>("/movie/now_playing", {
+      language: locale,
+      page: String(page),
+    });
+  },
+  ["now-playing"],
+  { revalidate: 3600, tags: ["now-playing"] }
+);
 
-export async function getTopRatedMovies(
-  locale: string = "en",
-  page: number = 1
-): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("trending");
-  cacheTag("top-rated");
-
-  return tmdbFetch<PaginatedResponse<Movie>>("/movie/top_rated", {
-    language: locale,
-    page: String(page),
-  });
-}
-
-export async function getNowPlayingMovies(
-  locale: string = "en",
-  page: number = 1
-): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("trending");
-  cacheTag("now-playing");
-
-  return tmdbFetch<PaginatedResponse<Movie>>("/movie/now_playing", {
-    language: locale,
-    page: String(page),
-  });
-}
-
-export async function getUpcomingMovies(
-  locale: string = "en",
-  page: number = 1
-): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("trending");
-  cacheTag("upcoming");
-
-  return tmdbFetch<PaginatedResponse<Movie>>("/movie/upcoming", {
-    language: locale,
-    page: String(page),
-  });
-}
+export const getUpcomingMovies = unstable_cache(
+  async (
+    locale: string = "en",
+    page: number = 1
+  ): Promise<PaginatedResponse<Movie>> => {
+    return tmdbFetch<PaginatedResponse<Movie>>("/movie/upcoming", {
+      language: locale,
+      page: String(page),
+    });
+  },
+  ["upcoming"],
+  { revalidate: 3600, tags: ["upcoming"] }
+);
 
 export async function getMovieDetails(
   movieId: number,
   locale: string = "en"
 ): Promise<MovieDetails> {
-  "use cache";
-  cacheLife("movie");
-  cacheTag(`movie-${movieId}`);
-
-  return tmdbFetch<MovieDetails>(`/movie/${movieId}`, {
-    language: locale,
-  });
+  const cachedFn = unstable_cache(
+    async () =>
+      tmdbFetch<MovieDetails>(`/movie/${movieId}`, { language: locale }),
+    [`movie-${movieId}-${locale}`],
+    { revalidate: 86400, tags: [`movie-${movieId}`] }
+  );
+  return cachedFn();
 }
 
 export async function getMovieCredits(
   movieId: number,
   locale: string = "en"
 ): Promise<Credits> {
-  "use cache";
-  cacheLife("movie");
-  cacheTag(`movie-${movieId}-credits`);
-
-  return tmdbFetch<Credits>(`/movie/${movieId}/credits`, {
-    language: locale,
-  });
+  const cachedFn = unstable_cache(
+    async () =>
+      tmdbFetch<Credits>(`/movie/${movieId}/credits`, { language: locale }),
+    [`movie-${movieId}-credits-${locale}`],
+    { revalidate: 86400, tags: [`movie-${movieId}-credits`] }
+  );
+  return cachedFn();
 }
 
 export async function getMovieRecommendations(
@@ -220,17 +199,16 @@ export async function getMovieRecommendations(
   locale: string = "en",
   page: number = 1
 ): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("movie");
-  cacheTag(`movie-${movieId}-recommendations`);
-
-  return tmdbFetch<PaginatedResponse<Movie>>(
-    `/movie/${movieId}/recommendations`,
-    {
-      language: locale,
-      page: String(page),
-    }
+  const cachedFn = unstable_cache(
+    async () =>
+      tmdbFetch<PaginatedResponse<Movie>>(`/movie/${movieId}/recommendations`, {
+        language: locale,
+        page: String(page),
+      }),
+    [`movie-${movieId}-recommendations-${locale}-${page}`],
+    { revalidate: 86400, tags: [`movie-${movieId}-recommendations`] }
   );
+  return cachedFn();
 }
 
 export async function getSimilarMovies(
@@ -238,14 +216,16 @@ export async function getSimilarMovies(
   locale: string = "en",
   page: number = 1
 ): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("movie");
-  cacheTag(`movie-${movieId}-similar`);
-
-  return tmdbFetch<PaginatedResponse<Movie>>(`/movie/${movieId}/similar`, {
-    language: locale,
-    page: String(page),
-  });
+  const cachedFn = unstable_cache(
+    async () =>
+      tmdbFetch<PaginatedResponse<Movie>>(`/movie/${movieId}/similar`, {
+        language: locale,
+        page: String(page),
+      }),
+    [`movie-${movieId}-similar-${locale}-${page}`],
+    { revalidate: 86400, tags: [`movie-${movieId}-similar`] }
+  );
+  return cachedFn();
 }
 
 export async function searchMovies(
@@ -253,29 +233,30 @@ export async function searchMovies(
   locale: string = "en",
   page: number = 1
 ): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("search");
-  cacheTag("search");
-
-  return tmdbFetch<PaginatedResponse<Movie>>("/search/movie", {
-    query,
-    language: locale,
-    page: String(page),
-    include_adult: "false",
-  });
+  const cachedFn = unstable_cache(
+    async () =>
+      tmdbFetch<PaginatedResponse<Movie>>("/search/movie", {
+        query,
+        language: locale,
+        page: String(page),
+        include_adult: "false",
+      }),
+    [`search-${query}-${locale}-${page}`],
+    { revalidate: 300, tags: ["search"] }
+  );
+  return cachedFn();
 }
 
-export async function getGenres(locale: string = "en"): Promise<Genre[]> {
-  "use cache";
-  cacheLife("genres");
-  cacheTag("genres");
-
-  const response = await tmdbFetch<{ genres: Genre[] }>("/genre/movie/list", {
-    language: locale,
-  });
-
-  return response.genres;
-}
+export const getGenres = unstable_cache(
+  async (locale: string = "en"): Promise<Genre[]> => {
+    const response = await tmdbFetch<{ genres: Genre[] }>("/genre/movie/list", {
+      language: locale,
+    });
+    return response.genres;
+  },
+  ["genres"],
+  { revalidate: 86400, tags: ["genres"] }
+);
 
 export async function discoverMovies(
   locale: string = "en",
@@ -287,10 +268,6 @@ export async function discoverMovies(
     vote_average_gte?: number;
   } = {}
 ): Promise<PaginatedResponse<Movie>> {
-  "use cache";
-  cacheLife("search");
-  cacheTag("discover");
-
   const params: Record<string, string> = {
     language: locale,
     page: String(options.page || 1),
@@ -310,5 +287,11 @@ export async function discoverMovies(
     params["vote_average.gte"] = String(options.vote_average_gte);
   }
 
-  return tmdbFetch<PaginatedResponse<Movie>>("/discover/movie", params);
+  const cacheKey = `discover-${locale}-${JSON.stringify(options)}`;
+  const cachedFn = unstable_cache(
+    async () => tmdbFetch<PaginatedResponse<Movie>>("/discover/movie", params),
+    [cacheKey],
+    { revalidate: 300, tags: ["discover"] }
+  );
+  return cachedFn();
 }

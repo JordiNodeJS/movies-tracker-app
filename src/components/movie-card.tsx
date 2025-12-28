@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Star, Plus, Check } from "lucide-react";
-import { getImageUrl } from "@/lib/tmdb";
+import { getImageUrl } from "@/lib/tmdb-utils";
 
 interface MovieCardProps {
   id: number;

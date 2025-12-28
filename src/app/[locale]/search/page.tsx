@@ -113,7 +113,7 @@ export default async function SearchPage({
             <div className="text-center py-20">
               <SearchX className="w-16 h-16 mx-auto mb-4 text-[var(--foreground-subtle)]" />
               <h2 className="text-xl font-semibold mb-2">
-                {t("noResults")} "{query}"
+                {t("noResults")} &ldquo;{query}&rdquo;
               </h2>
               <p className="text-[var(--foreground-muted)]">
                 {t("tryDifferent")}

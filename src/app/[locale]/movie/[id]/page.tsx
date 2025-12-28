@@ -5,9 +5,8 @@ import {
   getMovieDetails,
   getMovieCredits,
   getMovieRecommendations,
-  getImageUrl,
-  getBackdropUrl,
 } from "@/lib/tmdb";
+import { getImageUrl, getBackdropUrl } from "@/lib/tmdb-utils";
 import {
   getCurrentUser,
   isInWatchlist,
@@ -110,7 +109,7 @@ export default async function MoviePage({ params }: MoviePageProps) {
               </h1>
               {movie.tagline && (
                 <p className="text-xl text-[var(--color-accent)] italic">
-                  "{movie.tagline}"
+                  &ldquo;{movie.tagline}&rdquo;
                 </p>
               )}
             </div>

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Trash2, Loader2, Star } from "lucide-react";
-import { getImageUrl } from "@/lib/tmdb";
+import { getImageUrl } from "@/lib/tmdb-utils";
 import { removeFromWatchlist } from "@/lib/actions";
 
 interface WatchlistItem {
@@ -27,7 +27,6 @@ export function WatchlistClient({
   locale,
 }: WatchlistClientProps) {
   const [items, setItems] = useState(initialItems);
-  const t = useTranslations("watchlist");
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
