@@ -42,14 +42,14 @@ export function LoginForm({ locale }: LoginFormProps) {
           {t("email")}
         </label>
         <div className="relative">
-          <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--foreground-subtle)]" />
+          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--foreground-subtle)]" />
           <input
             id="email"
             name="email"
             type="email"
             required
             autoComplete="email"
-            className="pl-10"
+            className="pl-12"
             placeholder="you@example.com"
           />
         </div>
@@ -60,14 +60,14 @@ export function LoginForm({ locale }: LoginFormProps) {
           {t("password")}
         </label>
         <div className="relative">
-          <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--foreground-subtle)]" />
+          <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--foreground-subtle)]" />
           <input
             id="password"
             name="password"
             type="password"
             required
             autoComplete="current-password"
-            className="pl-10"
+            className="pl-12"
             placeholder="••••••••"
           />
         </div>
