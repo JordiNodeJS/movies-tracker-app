@@ -7,6 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  schemas  = ["movies_tracker_app_2"]
 }
 
 model User {
@@ -24,6 +25,7 @@ model User {
   recommendations Recommendation[]
 
   @@map("users")
+  @@schema("movies_tracker_app_2")
 }
 
 model WatchlistItem {
@@ -38,6 +40,7 @@ model WatchlistItem {
 
   @@unique([userId, movieId])
   @@map("watchlist_items")
+  @@schema("movies_tracker_app_2")
 }
 
 model Rating {
@@ -53,6 +56,7 @@ model Rating {
 
   @@unique([userId, movieId])
   @@map("ratings")
+  @@schema("movies_tracker_app_2")
 }
 
 model Note {
@@ -68,6 +72,7 @@ model Note {
 
   @@unique([userId, movieId])
   @@map("notes")
+  @@schema("movies_tracker_app_2")
 }
 
 model UserPreference {
@@ -82,6 +87,7 @@ model UserPreference {
   user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("user_preferences")
+  @@schema("movies_tracker_app_2")
 }
 
 model ViewHistory {
@@ -95,6 +101,7 @@ model ViewHistory {
 
   @@index([userId, viewedAt])
   @@map("view_history")
+  @@schema("movies_tracker_app_2")
 }
 
 model Recommendation {
@@ -113,4 +120,15 @@ model Recommendation {
   @@unique([userId, movieId])
   @@index([userId, dismissed, score])
   @@map("recommendations")
+  @@schema("movies_tracker_app_2")
+}
+
+model GenreCache {
+  id        Int      @id
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("genre_cache")
+  @@schema("movies_tracker_app_2")
 }
