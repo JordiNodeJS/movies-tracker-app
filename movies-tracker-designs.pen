@@ -1,0 +1,3935 @@
+{
+  "version": "2.6",
+  "children": [
+    {
+      "type": "frame",
+      "id": "6PgoI",
+      "x": 100,
+      "y": 100,
+      "name": "Home Desktop",
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ialU5",
+          "name": "navbar",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            24,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "c5RDt",
+              "name": "navLogo",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "QtCE4",
+              "name": "navLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4AZGX",
+                  "name": "navHome",
+                  "fill": "$text-primary",
+                  "content": "Inicio",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "POLu8",
+                  "name": "navSearch",
+                  "fill": "$text-secondary",
+                  "content": "Buscar",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tHaVZ",
+              "name": "navLogin",
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0SjxR",
+                  "name": "navLoginText",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GgAix",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mgLmC",
+              "name": "heroTitle",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "Descubre Tu Próxima Película Favorita",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 64,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "HewNx",
+              "name": "heroSubtitle",
+              "fill": "$text-secondary",
+              "content": "Sigue, califica y explora miles de películas",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "G3rON",
+              "name": "searchBox",
+              "width": 600,
+              "height": 56,
+              "fill": "$surface",
+              "cornerRadius": 12,
+              "padding": [
+                0,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hKcbD",
+                  "name": "searchInput",
+                  "fill": "$text-secondary",
+                  "content": "Buscar películas...",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TiA3O",
+          "name": "trending",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Rymxu",
+              "name": "trendingHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "51Zi9",
+                  "name": "trendingTitle",
+                  "fill": "$text-primary",
+                  "content": "Tendencias",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "fAihz",
+                  "name": "trendingViewAll",
+                  "fill": "$text-secondary",
+                  "content": "View All",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rnN24",
+              "name": "trendingGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jsnvJ",
+                  "name": "card1",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "pHhqF",
+                      "name": "card1Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "s7Kn1",
+                      "name": "card1Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "73KeZ",
+                          "name": "card1Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 6.5",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gjk7N",
+                          "name": "card1Title",
+                          "fill": "$text-primary",
+                          "content": "Los hermanos demolición",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LyqID",
+                          "name": "card1Year",
+                          "fill": "$text-secondary",
+                          "content": "2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FAMz1",
+                  "name": "card2",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "Xit1y",
+                      "name": "card2Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mBNLW",
+                      "name": "card2Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "E2GWD",
+                          "name": "card2Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 7.6",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nuiW6",
+                          "name": "card2Title",
+                          "fill": "$text-primary",
+                          "content": "Zootrópolis 2",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zPdrN",
+                          "name": "card2Year",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RUVOm",
+                  "name": "card3",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "hiD9b",
+                      "name": "card3Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MgIij",
+                      "name": "card3Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wXBV5",
+                          "name": "card3Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 5.9",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SnOi5",
+                          "name": "card3Title",
+                          "fill": "$text-primary",
+                          "content": "Anaconda",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OWESz",
+                          "name": "card3Year",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tlUv5",
+          "name": "popular",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZTRCC",
+              "name": "trendingHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ltWbO",
+                  "name": "trendingTitle",
+                  "fill": "$text-primary",
+                  "content": "Películas Populares",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "KvvJl",
+                  "name": "trendingViewAll",
+                  "fill": "$text-secondary",
+                  "content": "View All",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "s08AF",
+              "name": "trendingGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kWiJp",
+                  "name": "card1",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "cS6aM",
+                      "name": "card1Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hLGLU",
+                      "name": "card1Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "4JVbe",
+                          "name": "card1Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 6.5",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yujBn",
+                          "name": "card1Title",
+                          "fill": "$text-primary",
+                          "content": "Los hermanos demolición",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qVQnT",
+                          "name": "card1Year",
+                          "fill": "$text-secondary",
+                          "content": "2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pYXOA",
+                  "name": "card2",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "6u91i",
+                      "name": "card2Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fk88p",
+                      "name": "card2Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kVOTN",
+                          "name": "card2Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 7.6",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zoPz4",
+                          "name": "card2Title",
+                          "fill": "$text-primary",
+                          "content": "Zootrópolis 2",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Y7nbu",
+                          "name": "card2Year",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6ERTJ",
+                  "name": "card3",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "NYKJ8",
+                      "name": "card3Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7nOvo",
+                      "name": "card3Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "S815G",
+                          "name": "card3Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 5.9",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Avewy",
+                          "name": "card3Title",
+                          "fill": "$text-primary",
+                          "content": "Anaconda",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HaskX",
+                          "name": "card3Year",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WTtuE",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "NNGOD",
+              "name": "footerContent",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DhmOG",
+                  "name": "footerBrand",
+                  "fill": "$text-primary",
+                  "content": "Movies Tracker",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "gzt7x",
+                  "name": "footerLink",
+                  "fill": "$text-secondary",
+                  "content": "Powered by TMDB",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "YzW7C",
+              "name": "footerCopyright",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker. All rights reserved.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "9rpGp",
+      "x": 1640,
+      "y": 100,
+      "name": "Login Desktop",
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jdjMG",
+          "name": "navbarLogin",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            24,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ESB66",
+              "name": "navLogo",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "zEEPe",
+              "name": "navLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AStkB",
+                  "name": "navHome",
+                  "fill": "$text-primary",
+                  "content": "Inicio",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "vfCsr",
+                  "name": "navSearch",
+                  "fill": "$text-secondary",
+                  "content": "Buscar",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QVtS1",
+              "name": "navLogin",
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eeuvw",
+                  "name": "navLoginText",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "igXhx",
+          "name": "mainLogin",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            100,
+            0
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Ktuf9",
+              "name": "loginCard",
+              "width": 450,
+              "fill": "$surface",
+              "cornerRadius": 16,
+              "layout": "vertical",
+              "gap": 32,
+              "padding": 40,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8b7d8",
+                  "name": "loginTitle",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "oUuVe",
+                  "name": "loginForm",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VDS1c",
+                      "name": "emailLabel",
+                      "fill": "$text-primary",
+                      "content": "Correo Electrónico",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iKucp",
+                      "name": "emailInput",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XFVRJ",
+                          "name": "emailPlaceholder",
+                          "fill": "$text-secondary",
+                          "content": "tu@email.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "3rdbg",
+                      "name": "passwordLabel",
+                      "fill": "$text-primary",
+                      "content": "Contraseña",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bRiiy",
+                      "name": "passwordInput",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "do46x",
+                          "name": "passwordPlaceholder",
+                          "fill": "$text-secondary",
+                          "content": "••••••••",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KYy5r",
+                  "name": "loginButton",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$primary",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QxQvp",
+                      "name": "loginButtonText",
+                      "fill": "$text-primary",
+                      "content": "Iniciar Sesión",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Yqfi4",
+                  "name": "registerPrompt",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FUoZC",
+                      "name": "registerPromptText",
+                      "fill": "$text-secondary",
+                      "content": "¿No tienes cuenta?",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ti9Gm",
+                      "name": "registerLink",
+                      "fill": "$primary",
+                      "content": "Crear Cuenta",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "8XuTW",
+          "name": "footerLogin",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ADpbr",
+              "name": "footerContent",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BxyG3",
+                  "name": "footerBrand",
+                  "fill": "$text-primary",
+                  "content": "Movies Tracker",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "D7Ruk",
+                  "name": "footerLink",
+                  "fill": "$text-secondary",
+                  "content": "Powered by TMDB",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "JzSfn",
+              "name": "footerCopyright",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker. All rights reserved.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "RvVON",
+      "x": 3180,
+      "y": 100,
+      "name": "Register Desktop",
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "n53HD",
+          "name": "navbarRegister",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            24,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "x7GKp",
+              "name": "navLogo",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "yBeNq",
+              "name": "navLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zar6C",
+                  "name": "navHome",
+                  "fill": "$text-primary",
+                  "content": "Inicio",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "o9pDC",
+                  "name": "navSearch",
+                  "fill": "$text-secondary",
+                  "content": "Buscar",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kmhhG",
+              "name": "navLogin",
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ar24e",
+                  "name": "navLoginText",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1OrS4",
+          "name": "mainRegister",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            80,
+            0
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zLeQb",
+              "name": "registerCard",
+              "width": 450,
+              "fill": "$surface",
+              "cornerRadius": 16,
+              "layout": "vertical",
+              "gap": 32,
+              "padding": 40,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qy2aj",
+                  "name": "registerTitle",
+                  "fill": "$text-primary",
+                  "content": "Crear Cuenta",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "LF4kH",
+                  "name": "registerForm",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GrDEy",
+                      "name": "nameLabel",
+                      "fill": "$text-primary",
+                      "content": "Nombre",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "npBfc",
+                      "name": "nameInput",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yKcXA",
+                          "name": "namePlaceholder",
+                          "fill": "$text-secondary",
+                          "content": "Tu nombre",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "jxsz0",
+                      "name": "emailLabelReg",
+                      "fill": "$text-primary",
+                      "content": "Correo Electrónico",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kSxFn",
+                      "name": "emailInputReg",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uFIal",
+                          "name": "emailPlaceholderReg",
+                          "fill": "$text-secondary",
+                          "content": "tu@email.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "B2djA",
+                      "name": "passwordLabelReg",
+                      "fill": "$text-primary",
+                      "content": "Contraseña",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pCrPn",
+                      "name": "passwordInputReg",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QxonI",
+                          "name": "passwordPlaceholderReg",
+                          "fill": "$text-secondary",
+                          "content": "••••••••",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "tbqex",
+                      "name": "confirmPasswordLabel",
+                      "fill": "$text-primary",
+                      "content": "Confirmar Contraseña",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gDByy",
+                      "name": "confirmPasswordInput",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JYM28",
+                          "name": "confirmPasswordPlaceholder",
+                          "fill": "$text-secondary",
+                          "content": "••••••••",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TZ3c2",
+                  "name": "registerButton",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$primary",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VJLQ2",
+                      "name": "registerButtonText",
+                      "fill": "$text-primary",
+                      "content": "Crear Cuenta",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MdhEA",
+                  "name": "loginPrompt",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7rH5z",
+                      "name": "loginPromptText",
+                      "fill": "$text-secondary",
+                      "content": "¿Ya tienes cuenta?",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OCGwy",
+                      "name": "loginLink",
+                      "fill": "$primary",
+                      "content": "Iniciar Sesión",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VJxc1",
+          "name": "footerRegister",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "cjQu7",
+              "name": "footerContent",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9TZ4f",
+                  "name": "footerBrand",
+                  "fill": "$text-primary",
+                  "content": "Movies Tracker",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "QSt7q",
+                  "name": "footerLink",
+                  "fill": "$text-secondary",
+                  "content": "Powered by TMDB",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "UpvCd",
+              "name": "footerCopyright",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker. All rights reserved.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "TpuFb",
+      "x": 4720,
+      "y": 100,
+      "name": "Search Desktop",
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gMUDA",
+          "name": "navbarSearch",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            24,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "JlWYN",
+              "name": "navLogo",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "NcnOG",
+              "name": "navLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dFiEQ",
+                  "name": "navHome",
+                  "fill": "$text-primary",
+                  "content": "Inicio",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "2crvs",
+                  "name": "navSearch",
+                  "fill": "$text-secondary",
+                  "content": "Buscar",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1oDTl",
+              "name": "navLogin",
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KbyGU",
+                  "name": "navLoginText",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xkGRc",
+          "name": "searchHeader",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "YZgEH",
+              "name": "searchTitle",
+              "fill": "$text-primary",
+              "content": "Buscar Películas",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "wZiEE",
+              "name": "searchBoxMain",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "$surface",
+              "cornerRadius": 12,
+              "padding": [
+                0,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nlgLP",
+                  "name": "searchInputMain",
+                  "fill": "$text-secondary",
+                  "content": "Buscar películas...",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SButC",
+          "name": "resultsSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Bi6ua",
+              "name": "resultsTitle",
+              "fill": "$text-primary",
+              "content": "Resultados",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "1Ydh3",
+              "name": "resultsGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Z4W3a",
+                  "name": "searchCard1",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "geHHc",
+                      "name": "card1Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Hg3qz",
+                      "name": "card1Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "p7QjV",
+                          "name": "card1Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 6.5",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7YWcH",
+                          "name": "card1Title",
+                          "fill": "$text-primary",
+                          "content": "Los hermanos demolición",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "M9DPP",
+                          "name": "card1Year",
+                          "fill": "$text-secondary",
+                          "content": "2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "eKaFU",
+                  "name": "searchCard2",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "79yMS",
+                      "name": "card2Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dJc0D",
+                      "name": "card2Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "K8B0u",
+                          "name": "card2Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 7.6",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "GNul7",
+                          "name": "card2Title",
+                          "fill": "$text-primary",
+                          "content": "Zootrópolis 2",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZR9FK",
+                          "name": "card2Year",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jv5Ty",
+                  "name": "searchCard3",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "d0Zr3",
+                      "name": "card3Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "sq6BI",
+                      "name": "card3Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "w2IPE",
+                          "name": "card3Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 5.9",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SVpXT",
+                          "name": "card3Title",
+                          "fill": "$text-primary",
+                          "content": "Anaconda",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ioA5c",
+                          "name": "card3Year",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "obj9r",
+                  "name": "searchCard4",
+                  "width": 220,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "nLuvd",
+                      "name": "card1Img",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 330
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XGEyS",
+                      "name": "card1Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "65wwX",
+                          "name": "card1Rating",
+                          "fill": "$accent",
+                          "content": "⭐ 6.5",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "C4CI7",
+                          "name": "card1Title",
+                          "fill": "$text-primary",
+                          "content": "Los hermanos demolición",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Obfyz",
+                          "name": "card1Year",
+                          "fill": "$text-secondary",
+                          "content": "2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "u6o1j",
+          "name": "footerSearch",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "kDvWj",
+              "name": "footerContent",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h7dsf",
+                  "name": "footerBrand",
+                  "fill": "$text-primary",
+                  "content": "Movies Tracker",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "IWtoa",
+                  "name": "footerLink",
+                  "fill": "$text-secondary",
+                  "content": "Powered by TMDB",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sb4RL",
+              "name": "footerCopyright",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker. All rights reserved.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "oBifx",
+      "x": 6260,
+      "y": 100,
+      "name": "Movie Detail Desktop",
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "a8acp",
+          "name": "navbarDetail",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            24,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "r8gfD",
+              "name": "navLogo",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "S2Ilk",
+              "name": "navLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lIHDP",
+                  "name": "navHome",
+                  "fill": "$text-primary",
+                  "content": "Inicio",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CZG0v",
+                  "name": "navSearch",
+                  "fill": "$text-secondary",
+                  "content": "Buscar",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pOiU1",
+              "name": "navLogin",
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nbtud",
+                  "name": "navLoginText",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "4G4ub",
+          "name": "heroDetail",
+          "width": "fill_container",
+          "height": 500,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 180,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#000000FF",
+                "position": 0
+              },
+              {
+                "color": "#00000000",
+                "position": 1
+              }
+            ]
+          },
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            120
+          ],
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "xLckb",
+              "name": "movieTitle",
+              "fill": "$text-primary",
+              "content": "Los hermanos demolición",
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "pTdR9",
+              "name": "movieMeta",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pDsJH",
+                  "name": "movieRating",
+                  "fill": "$accent",
+                  "content": "⭐ 6.5",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Gvzff",
+                  "name": "movieDuration",
+                  "fill": "$text-secondary",
+                  "content": "124 min",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "55tsO",
+                  "name": "movieDate",
+                  "fill": "$text-secondary",
+                  "content": "28 de enero de 2026",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "k27hP",
+          "name": "movieContent",
+          "width": "fill_container",
+          "gap": 40,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 12,
+              "id": "Qc54J",
+              "name": "moviePoster",
+              "fill": "#1F2937",
+              "width": 300,
+              "height": 450
+            },
+            {
+              "type": "frame",
+              "id": "qis54",
+              "name": "movieInfo",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "35skl",
+                  "name": "addButton",
+                  "height": 48,
+                  "fill": "$primary",
+                  "cornerRadius": 8,
+                  "padding": [
+                    0,
+                    32
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7cCU0",
+                      "name": "addButtonText",
+                      "fill": "$text-primary",
+                      "content": "Añadir a Mi Lista",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ErYEs",
+                  "name": "synopsisSection",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rONga",
+                      "name": "synopsisTitle",
+                      "fill": "$text-primary",
+                      "content": "Sinopsis",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TGzqh",
+                      "name": "synopsisText",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Un improbable dúo de hermanastros...",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MNAN1",
+          "name": "castSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "KfGx9",
+              "name": "castTitle",
+              "fill": "$text-primary",
+              "content": "Reparto",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "LzSQI",
+              "name": "castGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kabMm",
+                  "name": "castCard1",
+                  "width": 150,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "SaMyd",
+                      "name": "castImg1",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 225
+                    },
+                    {
+                      "type": "text",
+                      "id": "k0Aqg",
+                      "name": "castName1",
+                      "fill": "$text-primary",
+                      "content": "Dave Bautista",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j49ki",
+                      "name": "castChar1",
+                      "fill": "$text-secondary",
+                      "content": "James Hale",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Frp47",
+          "name": "footerDetail",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "0UJMB",
+              "name": "footerContent",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ity9b",
+                  "name": "footerBrand",
+                  "fill": "$text-primary",
+                  "content": "Movies Tracker",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "7EwWQ",
+                  "name": "footerLink",
+                  "fill": "$text-secondary",
+                  "content": "Powered by TMDB",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "WcEBP",
+              "name": "footerCopyright",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker. All rights reserved.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lXAZW",
+      "x": 100,
+      "y": 3300,
+      "name": "Home Mobile",
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "35O4w",
+          "name": "navbarMobile",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "r4OMa",
+              "name": "navLogoMobile",
+              "fill": "$text-primary",
+              "content": "Movies",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "tD1UB",
+              "name": "navMenuMobile",
+              "fill": "$text-primary",
+              "content": "☰",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ctAuA",
+          "name": "heroMobile",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ibIjQ",
+              "name": "heroTitleMobile",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Descubre Tu Próxima Película Favorita",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "H0SUD",
+              "name": "heroSubtitleMobile",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Sigue, califica y explora miles de películas",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "6EwfL",
+              "name": "searchBoxMobile",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "$surface",
+              "cornerRadius": 12,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DEoFp",
+                  "name": "searchInputMobile",
+                  "fill": "$text-secondary",
+                  "content": "Buscar películas...",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PdPfK",
+          "name": "trendingMobile",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "GD5Kz",
+              "name": "trendingHeaderMobile",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2dFO3",
+                  "name": "trendingTitleMobile",
+                  "fill": "$text-primary",
+                  "content": "Tendencias",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "ZWl7y",
+                  "name": "trendingViewAllMobile",
+                  "fill": "$text-secondary",
+                  "content": "Ver Todo",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YX02b",
+              "name": "trendingScrollMobile",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NU1Jz",
+                  "name": "cardMobile1",
+                  "width": 160,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "4XdyI",
+                      "name": "cardImgMobile1",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 240
+                    },
+                    {
+                      "type": "frame",
+                      "id": "V6tjN",
+                      "name": "cardInfoMobile1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uHBhk",
+                          "name": "cardRatingMobile1",
+                          "fill": "$accent",
+                          "content": "⭐ 6.5",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wYOIs",
+                          "name": "cardTitleMobile1",
+                          "fill": "$text-primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Los hermanos demolición",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CPRNQ",
+                          "name": "cardYearMobile1",
+                          "fill": "$text-secondary",
+                          "content": "2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "M3Om5",
+                  "name": "cardMobile2",
+                  "width": 160,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "DNQUm",
+                      "name": "cardImgMobile2",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 240
+                    },
+                    {
+                      "type": "frame",
+                      "id": "paB69",
+                      "name": "cardInfoMobile2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uyBqH",
+                          "name": "cardRatingMobile2",
+                          "fill": "$accent",
+                          "content": "⭐ 7.6",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "oSYPu",
+                          "name": "cardTitleMobile2",
+                          "fill": "$text-primary",
+                          "content": "Zootrópolis 2",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "D68c3",
+                          "name": "cardYearMobile2",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OeJUK",
+          "name": "footerMobile",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "v05Yz",
+              "name": "footerBrandMobile",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "4SPrp",
+              "name": "footerLinkMobile",
+              "fill": "$text-secondary",
+              "content": "Powered by TMDB",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "3QjTZ",
+              "name": "footerCopyrightMobile",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "85NgW",
+      "x": 575,
+      "y": 3300,
+      "name": "Login Mobile",
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "mBfWh",
+          "name": "navbarLoginMobile",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "cXxNs",
+              "name": "navLogoMobile",
+              "fill": "$text-primary",
+              "content": "Movies",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "24gCw",
+              "name": "navMenuMobile",
+              "fill": "$text-primary",
+              "content": "☰",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "m98Fx",
+          "name": "mainLoginMobile",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            60,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "r1ilw",
+              "name": "loginCardMobile",
+              "width": "fill_container",
+              "fill": "$surface",
+              "cornerRadius": 16,
+              "layout": "vertical",
+              "gap": 24,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sD2OK",
+                  "name": "loginTitleMobile",
+                  "fill": "$text-primary",
+                  "content": "Iniciar Sesión",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "lt7g4",
+                  "name": "loginFormMobile",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WP19f",
+                      "name": "emailLabelMobile",
+                      "fill": "$text-primary",
+                      "content": "Correo Electrónico",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DCBg5",
+                      "name": "emailInputMobile",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "C42sL",
+                          "name": "emailPlaceholderMobile",
+                          "fill": "$text-secondary",
+                          "content": "tu@email.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "lF0D4",
+                      "name": "passwordLabelMobile",
+                      "fill": "$text-primary",
+                      "content": "Contraseña",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T500a",
+                      "name": "passwordInputMobile",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "2H2Jj",
+                          "name": "passwordPlaceholderMobile",
+                          "fill": "$text-secondary",
+                          "content": "••••••••",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "psNfV",
+                  "name": "loginButtonMobile",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$primary",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "u8uuk",
+                      "name": "loginButtonTextMobile",
+                      "fill": "$text-primary",
+                      "content": "Iniciar Sesión",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y3QKC",
+                  "name": "registerPromptMobile",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "1fBiS",
+                      "name": "registerPromptTextMobile",
+                      "fill": "$text-secondary",
+                      "content": "¿No tienes cuenta?",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rxY3E",
+                      "name": "registerLinkMobile",
+                      "fill": "$primary",
+                      "content": "Crear Cuenta",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iTh8m",
+          "name": "footerLoginMobile",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "ezx7c",
+              "name": "footerBrandMobile",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "4bOyQ",
+              "name": "footerLinkMobile",
+              "fill": "$text-secondary",
+              "content": "Powered by TMDB",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "pMeKR",
+              "name": "footerCopyrightMobile",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ICzAL",
+      "x": 1050,
+      "y": 3300,
+      "name": "Register Mobile",
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "W3aBS",
+          "name": "navbarRegMobile",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "TKvpQ",
+              "name": "navLogoMobile",
+              "fill": "$text-primary",
+              "content": "Movies",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "ZXzBA",
+              "name": "navMenuMobile",
+              "fill": "$text-primary",
+              "content": "☰",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mqqJu",
+          "name": "mainRegMobile",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "rGzrY",
+              "name": "regCardMobile",
+              "width": "fill_container",
+              "fill": "$surface",
+              "cornerRadius": 16,
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ueie2",
+                  "name": "regTitleMobile",
+                  "fill": "$text-primary",
+                  "content": "Crear Cuenta",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "frame",
+                  "id": "TjtJG",
+                  "name": "regFormMobile",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g7V3N",
+                      "name": "nameLabelM",
+                      "fill": "$text-primary",
+                      "content": "Nombre",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S8hUn",
+                      "name": "nameInputM",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "f2VBe",
+                          "name": "namePlaceholderM",
+                          "fill": "$text-secondary",
+                          "content": "Tu nombre",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "T2KhI",
+                      "name": "emailLabelM",
+                      "fill": "$text-primary",
+                      "content": "Correo Electrónico",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kVJa3",
+                      "name": "emailInputM",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "46bf0",
+                          "name": "emailPlaceholderM",
+                          "fill": "$text-secondary",
+                          "content": "tu@email.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "tTuD4",
+                      "name": "passLabelM",
+                      "fill": "$text-primary",
+                      "content": "Contraseña",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DwQ2M",
+                      "name": "passInputM",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6MTQZ",
+                          "name": "passPlaceholderM",
+                          "fill": "$text-secondary",
+                          "content": "••••••••",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ueu4S",
+                      "name": "confirmLabelM",
+                      "fill": "$text-primary",
+                      "content": "Confirmar Contraseña",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "l4t0e",
+                      "name": "confirmInputM",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$background",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Yfnwh",
+                          "name": "confirmPlaceholderM",
+                          "fill": "$text-secondary",
+                          "content": "••••••••",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FaiCG",
+                  "name": "regButtonM",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$primary",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dzW6O",
+                      "name": "regButtonTextM",
+                      "fill": "$text-primary",
+                      "content": "Crear Cuenta",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jem2B",
+                  "name": "loginPromptM",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A66f0",
+                      "name": "loginPromptTextM",
+                      "fill": "$text-secondary",
+                      "content": "¿Ya tienes cuenta?",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YKW8k",
+                      "name": "loginLinkM",
+                      "fill": "$primary",
+                      "content": "Iniciar Sesión",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0rmzb",
+          "name": "footerRegM",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "VoXqD",
+              "name": "footerBrandMobile",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "kLAm3",
+              "name": "footerLinkMobile",
+              "fill": "$text-secondary",
+              "content": "Powered by TMDB",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "PvLnT",
+              "name": "footerCopyrightMobile",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "72BNJ",
+      "x": 1525,
+      "y": 3300,
+      "name": "Search Mobile",
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "aMPEN",
+          "name": "navbarSearchM",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mlaEa",
+              "name": "navLogoMobile",
+              "fill": "$text-primary",
+              "content": "Movies",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "nlYaL",
+              "name": "navMenuMobile",
+              "fill": "$text-primary",
+              "content": "☰",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pJt6K",
+          "name": "searchHeaderM",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            40,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "PF1wc",
+              "name": "searchTitleM",
+              "fill": "$text-primary",
+              "content": "Buscar Películas",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "QfszV",
+              "name": "searchBoxM",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "$surface",
+              "cornerRadius": 12,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YOxvd",
+                  "name": "searchInputM",
+                  "fill": "$text-secondary",
+                  "content": "Buscar películas...",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FamPj",
+          "name": "resultsM",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "8bMUy",
+              "name": "resultsTitleM",
+              "fill": "$text-primary",
+              "content": "Resultados",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "W5PDY",
+              "name": "resultsGridM",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AUWAF",
+                  "name": "searchCardM1",
+                  "width": 160,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "jcZ1v",
+                      "name": "cardImgMobile1",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 240
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VrBUk",
+                      "name": "cardInfoMobile1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "T6MMp",
+                          "name": "cardRatingMobile1",
+                          "fill": "$accent",
+                          "content": "⭐ 6.5",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QsULu",
+                          "name": "cardTitleMobile1",
+                          "fill": "$text-primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Los hermanos demolición",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "2kuwk",
+                          "name": "cardYearMobile1",
+                          "fill": "$text-secondary",
+                          "content": "2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "3w9x5",
+                  "name": "searchCardM2",
+                  "width": 160,
+                  "fill": "$surface",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "id": "ZhViI",
+                      "name": "cardImgMobile2",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 240
+                    },
+                    {
+                      "type": "frame",
+                      "id": "We6zf",
+                      "name": "cardInfoMobile2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WWfiz",
+                          "name": "cardRatingMobile2",
+                          "fill": "$accent",
+                          "content": "⭐ 7.6",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CvpCM",
+                          "name": "cardTitleMobile2",
+                          "fill": "$text-primary",
+                          "content": "Zootrópolis 2",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TxcRm",
+                          "name": "cardYearMobile2",
+                          "fill": "$text-secondary",
+                          "content": "2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EmauD",
+          "name": "footerSearchM",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "I4p6N",
+              "name": "footerBrandMobile",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "v37bT",
+              "name": "footerLinkMobile",
+              "fill": "$text-secondary",
+              "content": "Powered by TMDB",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "50Wkb",
+              "name": "footerCopyrightMobile",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "oC6l0",
+      "x": 2000,
+      "y": 3300,
+      "name": "Movie Detail Mobile",
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Aj9cb",
+          "name": "navbarDetailM",
+          "width": "fill_container",
+          "fill": "#0A0A0AEE",
+          "padding": [
+            16,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "MZDoQ",
+              "name": "navLogoMobile",
+              "fill": "$text-primary",
+              "content": "Movies",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "AV5XO",
+              "name": "navMenuMobile",
+              "fill": "$text-primary",
+              "content": "☰",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eNXOO",
+          "name": "heroDetailM",
+          "width": "fill_container",
+          "height": 300,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 180,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#000000FF",
+                "position": 0
+              },
+              {
+                "color": "#00000000",
+                "position": 1
+              }
+            ]
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            40,
+            20
+          ],
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "qPCZi",
+              "name": "movieTitleM",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Los hermanos demolición",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "o5vVY",
+              "name": "movieMetaM",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Dw1yE",
+                  "name": "movieRatingM",
+                  "fill": "$accent",
+                  "content": "⭐ 6.5",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "eOC1r",
+                  "name": "movieDurationM",
+                  "fill": "$text-secondary",
+                  "content": "124 min",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r1dL5",
+          "name": "movieContentM",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 12,
+              "id": "uHQT2",
+              "name": "moviePosterM",
+              "fill": "#1F2937",
+              "width": "fill_container",
+              "height": 400
+            },
+            {
+              "type": "frame",
+              "id": "g1qb8",
+              "name": "addButtonM",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cPHt1",
+                  "name": "addButtonTextM",
+                  "fill": "$text-primary",
+                  "content": "Añadir a Mi Lista",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p9y9j",
+              "name": "synopsisSectionM",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Sfm7P",
+                  "name": "synopsisTitleM",
+                  "fill": "$text-primary",
+                  "content": "Sinopsis",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "9nUdH",
+                  "name": "synopsisTextM",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Un improbable dúo de hermanastros...",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0UPUb",
+          "name": "castSectionM",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "DG4ke",
+              "name": "castTitleM",
+              "fill": "$text-primary",
+              "content": "Reparto",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "ew5jq",
+              "name": "castGridM",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E4dnS",
+                  "name": "castCardM1",
+                  "width": 120,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "3GguK",
+                      "name": "castImgM1",
+                      "fill": "#1F2937",
+                      "width": "fill_container",
+                      "height": 180
+                    },
+                    {
+                      "type": "text",
+                      "id": "BERS4",
+                      "name": "castNameM1",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Dave Bautista",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pWbnl",
+                      "name": "castCharM1",
+                      "fill": "$text-secondary",
+                      "content": "James Hale",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZbcKz",
+          "name": "footerDetailM",
+          "width": "fill_container",
+          "fill": "$surface",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "7zwrl",
+              "name": "footerBrandMobile",
+              "fill": "$text-primary",
+              "content": "Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "8xRZ2",
+              "name": "footerLinkMobile",
+              "fill": "$text-secondary",
+              "content": "Powered by TMDB",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "kavlm",
+              "name": "footerCopyrightMobile",
+              "fill": "$text-secondary",
+              "content": "© 2026 Movies Tracker",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent": {
+      "type": "color",
+      "value": "#22C55E"
+    },
+    "background": {
+      "type": "color",
+      "value": "#0A0A0A"
+    },
+    "primary": {
+      "type": "color",
+      "value": "#6366F1"
+    },
+    "spacing-lg": {
+      "type": "number",
+      "value": 24
+    },
+    "spacing-md": {
+      "type": "number",
+      "value": 16
+    },
+    "spacing-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "spacing-xl": {
+      "type": "number",
+      "value": 32
+    },
+    "surface": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#A1A1AA"
+    }
+  }
+}
