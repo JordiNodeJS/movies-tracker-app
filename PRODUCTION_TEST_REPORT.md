@@ -1,7 +1,7 @@
 # Production Test Report - Movies Tracker App
 
 **Date:** February 2, 2026
-**Production URL:** https://movies-tracker-app-tawny.vercel.app
+**Production URL:** https://[your-vercel-deployment-url]
 
 ## Summary
 

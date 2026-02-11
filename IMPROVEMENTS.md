@@ -3,11 +3,13 @@
 ## Priority 1: Error Handling for Missing Environment Variables
 
 ### Issue: Unvalidated Environment Variables
+
 Currently, the application assumes environment variables exist without validation. This causes cryptic errors at runtime.
 
 ### Recommended Fixes
 
 #### 1. `src/lib/tmdb.ts` - Add validation
+
 ```typescript
 import "server-only";
 import { unstable_cache } from "next/cache";
@@ -20,15 +22,13 @@ const ACCESS_TOKEN = process.env.TMDB_ACCESS_TOKEN;
 if (!ACCESS_TOKEN) {
   console.error(
     "❌ CRITICAL: TMDB_ACCESS_TOKEN environment variable is not set. " +
-    "The application cannot fetch movie data. " +
-    "Please configure this variable in your .env file or Vercel dashboard."
+      "The application cannot fetch movie data. " +
+      "Please configure this variable in your .env file or Vercel dashboard.",
   );
-  
+
   // In production, throw error; in development, allow with warning
   if (process.env.NODE_ENV === "production") {
-    throw new Error(
-      "Missing required environment variable: TMDB_ACCESS_TOKEN"
-    );
+    throw new Error("Missing required environment variable: TMDB_ACCESS_TOKEN");
   }
 }
 
@@ -36,6 +36,7 @@ if (!ACCESS_TOKEN) {
 ```
 
 #### 2. `src/lib/prisma.ts` - Add validation with helpful message
+
 ```typescript
 import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "@prisma/client";
@@ -46,7 +47,7 @@ const globalForPrisma = globalThis as unknown as {
 
 function createPrismaClient() {
   const connectionString = process.env.DATABASE_URL;
-  
+
   // Validate environment variable
   if (!connectionString) {
     const message =
@@ -56,9 +57,9 @@ function createPrismaClient() {
       "- Local: Add to .env.local\n" +
       "- Production: Configure in Vercel dashboard\n" +
       "- Expected format: postgresql://[user]:[password]@[host]:[port]/[database]";
-    
+
     console.error(message);
-    
+
     if (process.env.NODE_ENV === "production") {
       throw new Error("Missing required environment variable: DATABASE_URL");
     }
@@ -76,18 +77,22 @@ if (process.env.NODE_ENV !== "production") {
 ```
 
 #### 3. `src/lib/auth-utils.ts` - Add JWT_SECRET validation
+
 ```typescript
 import { randomBytes, scrypt, timingSafeEqual } from "crypto";
 import { SignJWT, jwtVerify, type JWTPayload } from "jose";
 
-const JWT_SECRET_RAW = process.env.JWT_SECRET || "your-super-secret-key-change-in-production";
+const JWT_SECRET_RAW =
+  process.env.JWT_SECRET || "your-super-secret-key-change-in-production";
 
 // Validate JWT_SECRET in production
-if (process.env.NODE_ENV === "production" && 
-    JWT_SECRET_RAW === "your-super-secret-key-change-in-production") {
+if (
+  process.env.NODE_ENV === "production" &&
+  JWT_SECRET_RAW === "your-super-secret-key-change-in-production"
+) {
   throw new Error(
     "❌ CRITICAL: JWT_SECRET is using the default development value in production! " +
-    "Please set a secure random JWT_SECRET in your environment variables."
+      "Please set a secure random JWT_SECRET in your environment variables.",
   );
 }
 
@@ -97,6 +102,7 @@ const JWT_SECRET = new TextEncoder().encode(JWT_SECRET_RAW);
 ```
 
 #### 4. Create a new validation file: `src/lib/validate-env.ts`
+
 ```typescript
 /**
  * Validate that all required environment variables are set
@@ -148,13 +154,17 @@ For more info, see: DEPLOYMENT_REPORT.md
 
     // Fail loudly in production
     if (process.env.NODE_ENV === "production") {
-      throw new Error("Missing required environment variables: " + missing.map((v) => v.split(":")[0]).join(", "));
+      throw new Error(
+        "Missing required environment variables: " +
+          missing.map((v) => v.split(":")[0]).join(", "),
+      );
     }
   }
 }
 ```
 
 #### 5. Update `src/app/layout.tsx` to validate on startup
+
 ```typescript
 import type { Metadata } from "next";
 import "./globals.css";
@@ -182,14 +192,15 @@ export default function RootLayout({
 ## Priority 2: Better Error Handling in Components
 
 ### Recommended: Add error boundary for TMDB API failures
+
 ```typescript
 // src/components/movie-section-error.tsx
-export function MovieSectionError({ 
-  title, 
-  error 
-}: { 
-  title: string; 
-  error: Error 
+export function MovieSectionError({
+  title,
+  error
+}: {
+  title: string;
+  error: Error
 }) {
   return (
     <section className="py-12 px-4">
@@ -212,6 +223,7 @@ export function MovieSectionError({
 ## Priority 3: Environment Variable Documentation
 
 ### Create `env.example` file
+
 ```bash
 # Copy this file to .env.local and fill in your actual values
 # Never commit .env files to version control
@@ -235,6 +247,7 @@ JWT_SECRET=your_secure_random_jwt_secret_here
 ## Priority 4: Add Environment Validation Script
 
 ### Create `scripts/validate-env.sh`
+
 ```bash
 #!/bin/bash
 
@@ -266,22 +279,16 @@ else
 fi
 ```
 
-### Update `package.json` to include validation
-```json
-{
-  "scripts": {
-    "dev": "npm run validate-env && next dev --turbopack",
-    "build": "npm run validate-env && prisma generate && next build",
-    "validate-env": "bash scripts/validate-env.sh"
-  }
-}
-```
+### Note on Environment Validation
+
+The current `package.json` does not include the `validate-env` script suggestion below. If implementing this recommendation, ensure to update package.json accordingly and use `pnpm` instead of `npm run` for all commands.
 
 ---
 
 ## Priority 5: Enhanced Logging for Debugging
 
 ### Create `src/lib/logger.ts`
+
 ```typescript
 /**
  * Simple logger utility for consistent logging
@@ -300,7 +307,7 @@ function formatLog(level: LogLevel, message: string, data?: unknown) {
 
   console.log(
     `${emoji[level]} [${timestamp}] [${level.toUpperCase()}] ${message}`,
-    data ? JSON.stringify(data, null, 2) : ""
+    data ? JSON.stringify(data, null, 2) : "",
   );
 }
 
@@ -316,23 +323,24 @@ export const logger = {
 
 ## Summary of Changes
 
-| File | Change | Priority |
-|------|--------|----------|
-| `src/lib/validate-env.ts` | NEW - Centralized env validation | 🔴 P1 |
-| `src/lib/tmdb.ts` | Add error check for TMDB_ACCESS_TOKEN | 🔴 P1 |
-| `src/lib/prisma.ts` | Add error check for DATABASE_URL | 🔴 P1 |
-| `src/lib/auth-utils.ts` | Add validation for JWT_SECRET | 🔴 P1 |
-| `src/app/layout.tsx` | Call validateEnvironmentVariables() | 🔴 P1 |
-| `env.example` | NEW - Document required variables | 🟡 P2 |
-| `scripts/validate-env.sh` | NEW - Pre-flight check script | 🟡 P2 |
-| `package.json` | Add validate-env script | 🟡 P2 |
-| `src/lib/logger.ts` | NEW - Better logging | 🟢 P3 |
+| File                      | Change                                | Priority |
+| ------------------------- | ------------------------------------- | -------- |
+| `src/lib/validate-env.ts` | NEW - Centralized env validation      | 🔴 P1    |
+| `src/lib/tmdb.ts`         | Add error check for TMDB_ACCESS_TOKEN | 🔴 P1    |
+| `src/lib/prisma.ts`       | Add error check for DATABASE_URL      | 🔴 P1    |
+| `src/lib/auth-utils.ts`   | Add validation for JWT_SECRET         | 🔴 P1    |
+| `src/app/layout.tsx`      | Call validateEnvironmentVariables()   | 🔴 P1    |
+| `env.example`             | NEW - Document required variables     | 🟡 P2    |
+| `scripts/validate-env.sh` | NEW - Pre-flight check script         | 🟡 P2    |
+| `package.json`            | Add validate-env script               | 🟡 P2    |
+| `src/lib/logger.ts`       | NEW - Better logging                  | 🟢 P3    |
 
 ---
 
 ## Testing Recommendations
 
 ### Test 1: Missing TMDB_ACCESS_TOKEN
+
 ```bash
 # Temporarily unset TMDB_ACCESS_TOKEN
 unset TMDB_ACCESS_TOKEN
@@ -341,6 +349,7 @@ npm run dev
 ```
 
 ### Test 2: Missing DATABASE_URL
+
 ```bash
 # Temporarily unset DATABASE_URL
 unset DATABASE_URL
@@ -349,6 +358,7 @@ npm run dev
 ```
 
 ### Test 3: Invalid JWT_SECRET in production
+
 ```bash
 # Test that default JWT_SECRET fails in production
 NODE_ENV=production npm run build

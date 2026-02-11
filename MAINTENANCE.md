@@ -4,6 +4,15 @@
 
 This guide provides instructions for maintaining, monitoring, and troubleshooting the Movies Tracker App in production.
 
+### Infrastructure Details
+
+- **Active Neon Project:** `neon-indigo-kite` (ID: `wispy-poetry-52762475`)
+- **Neon Region:** AWS EU-West-2
+- **Database:** `neondb` (Schema: `movies_tracker_app_2`)
+- **Current Branch:** `main` with endpoint `ep-aged-night-ab7l7nwr.eu-west-2.aws.neon.tech`
+- **PostgreSQL Version:** 17
+- **Deployment:** Vercel with automatic deployments on `main` branch push
+
 ---
 
 ## 📋 Table of Contents
@@ -26,10 +35,10 @@ This guide provides instructions for maintaining, monitoring, and troubleshootin
 
 ```bash
 # View current production deployment
-vercel inspect movies-tracker-app-tawny.vercel.app
+vercel inspect <deployment-url>
 
 # View deployment logs
-vercel inspect movies-tracker-app-tawny.vercel.app --logs
+vercel inspect <deployment-url> --logs
 
 # Check environment variables
 vercel env list
@@ -51,23 +60,20 @@ vercel inspect <deployment-url>
 # Install dependencies
 pnpm install
 
-# Validate environment variables
-npm run validate-env
-
 # Run development server
-npm run dev
+pnpm dev
 
 # Run type checking
-npm run type-check
+pnpm type-check
 
 # Run linting
-npm run lint
+pnpm lint
 
 # Build for production
-npm run build
+pnpm build
 
 # Start production server
-npm run start
+pnpm start
 ```
 
 ---
@@ -77,16 +83,19 @@ npm run start
 ### Key Metrics to Monitor
 
 #### 1. **Deployment Status**
+
 - Check Vercel dashboard regularly
 - Monitor build success rate
 - Track deployment frequency
 
 #### 2. **Application Performance**
+
 - Response times (target: < 200ms)
 - Error rates (target: < 0.1%)
 - Uptime (target: > 99.9%)
 
 #### 3. **API Integration Health**
+
 - TMDB API availability
 - Database connection status
 - JWT token generation/validation
@@ -137,10 +146,12 @@ curl -H "Authorization: Bearer $TMDB_ACCESS_TOKEN" \
 ### Issue 1: Movies Not Loading
 
 **Symptoms:**
+
 - Blank movie listings on home page
 - Error messages about TMDB
 
 **Diagnosis:**
+
 ```bash
 # Check if TMDB_ACCESS_TOKEN is set
 vercel env list
@@ -151,6 +162,7 @@ curl -H "Authorization: Bearer $TMDB_ACCESS_TOKEN" \
 ```
 
 **Solutions:**
+
 - Verify TMDB_ACCESS_TOKEN is set correctly: `vercel env add TMDB_ACCESS_TOKEN production`
 - Check TMDB API status: https://status.themoviedb.org/
 - Check Vercel build logs: `vercel inspect <url> --logs`
@@ -159,11 +171,13 @@ curl -H "Authorization: Bearer $TMDB_ACCESS_TOKEN" \
 ### Issue 2: Database Connection Errors
 
 **Symptoms:**
+
 - "Failed to add to watchlist" errors
 - User data not saving
 - Authentication failures
 
 **Diagnosis:**
+
 ```bash
 # Check DATABASE_URL
 vercel env list
@@ -173,6 +187,7 @@ vercel env list
 ```
 
 **Solutions:**
+
 - Verify DATABASE_URL format: `postgresql://[user]:[password]@[host]:[port]/[database]`
 - Check Neon connection limits: https://console.neon.tech
 - Restart database connection: Disconnect and reconnect in Neon console
@@ -182,11 +197,13 @@ vercel env list
 ### Issue 3: Authentication Not Working
 
 **Symptoms:**
+
 - Login fails silently
 - JWT token validation errors
 - Users unable to register
 
 **Diagnosis:**
+
 ```bash
 # Check JWT_SECRET is set
 vercel env list | grep JWT_SECRET
@@ -196,6 +213,7 @@ vercel env list | grep JWT_SECRET
 ```
 
 **Solutions:**
+
 - Verify JWT_SECRET is set: `vercel env add JWT_SECRET production`
 - Ensure JWT_SECRET is cryptographically secure (32+ characters)
 - Clear browser cookies and retry login
@@ -204,21 +222,24 @@ vercel env list | grep JWT_SECRET
 ### Issue 4: Build Failures
 
 **Symptoms:**
+
 - Deployment fails
 - "Build completed with errors" message
 - Application unavailable after deployment attempt
 
 **Diagnosis:**
+
 ```bash
 # Check build logs
-vercel inspect movies-tracker-app-tawny.vercel.app --logs
+vercel inspect <deployment-url> --logs
 
 # Verify locally before deploying
-npm run build
-npm run type-check
+pnpm build
+pnpm type-check
 ```
 
 **Solutions:**
+
 - Review error messages in build logs
 - Run `npm run build` locally to reproduce
 - Check TypeScript errors: `npm run type-check`
@@ -229,11 +250,13 @@ npm run type-check
 ### Issue 5: Performance Degradation
 
 **Symptoms:**
+
 - Slow page loads (> 5 seconds)
 - High CPU usage
 - Timeout errors
 
 **Solutions:**
+
 - Check Vercel analytics for bottlenecks
 - Optimize database queries in Neon
 - Enable Vercel caching for static assets
@@ -271,11 +294,11 @@ vercel env add VARIABLE_NAME production
 
 ### Current Production Variables
 
-| Variable | Purpose | Rotation | Status |
-|----------|---------|----------|--------|
-| `TMDB_ACCESS_TOKEN` | TMDB API authentication | Check annually or if issues arise | ✅ Active |
-| `DATABASE_URL` | Neon PostgreSQL connection | Only if changing databases | ✅ Active |
-| `JWT_SECRET` | User authentication tokens | Can rotate for security | ✅ Active |
+| Variable            | Purpose                    | Rotation                          | Status    |
+| ------------------- | -------------------------- | --------------------------------- | --------- |
+| `TMDB_ACCESS_TOKEN` | TMDB API authentication    | Check annually or if issues arise | ✅ Active |
+| `DATABASE_URL`      | Neon PostgreSQL connection | Only if changing databases        | ✅ Active |
+| `JWT_SECRET`        | User authentication tokens | Can rotate for security           | ✅ Active |
 
 ### JWT_SECRET Rotation (if needed)
 
@@ -301,12 +324,14 @@ vercel deploy --prod
 ### Neon Database Tasks
 
 #### Weekly Tasks
+
 - [ ] Monitor connection count
 - [ ] Review slow query logs
 - [ ] Check storage usage
 - [ ] Verify backups are created
 
 #### Monthly Tasks
+
 - [ ] Analyze database performance
 - [ ] Check for unused indexes
 - [ ] Review user data integrity
@@ -353,17 +378,20 @@ pnpm db:studio
 ### Caching Strategy
 
 #### 1. Next.js Caching
+
 - Static pages are cached at build time
 - Dynamic pages cached per request
 - Cache revalidation: 300-3600 seconds
 
 #### 2. TMDB API Caching
+
 - Trending movies: 1 hour cache
 - Popular movies: 1 hour cache
 - Movie details: 24 hour cache
 - Search results: 5 minute cache
 
 #### 3. Database Query Caching
+
 - User data: Per-request cache
 - Watchlist items: Per-request cache
 - Ratings: Per-request cache
@@ -385,17 +413,20 @@ pnpm db:studio
 ### Regular Security Tasks
 
 #### Weekly
+
 - [ ] Monitor GitHub security advisories
 - [ ] Check npm vulnerabilities: `npm audit`
 - [ ] Review access logs in Vercel
 
 #### Monthly
+
 - [ ] Update dependencies: `pnpm update`
 - [ ] Run full security audit
 - [ ] Review and rotate credentials if compromised
 - [ ] Check TMDB API access logs
 
 #### Quarterly
+
 - [ ] Penetration testing (if budget allows)
 - [ ] Security review of authentication flow
 - [ ] Database backup integrity testing
@@ -437,11 +468,13 @@ npm audit fix
 ### Backup Strategy
 
 #### Automatic Backups
+
 - Vercel: Automatic deployment snapshots (7-day retention)
 - Neon: Automatic daily backups (7-day retention)
 - GitHub: Version control backup
 
 #### Manual Backups
+
 ```bash
 # Backup database to file
 pg_dump $DATABASE_URL > backup_$(date +%Y%m%d_%H%M%S).sql
@@ -536,15 +569,15 @@ pnpm update                            # Update all packages
 pnpm outdated                          # Show outdated packages
 
 # Code Quality
-npm run lint                           # Run ESLint
-npm run type-check                     # Run TypeScript checker
-npm run build                          # Build for production
+pnpm lint                              # Run ESLint
+pnpm type-check                        # Run TypeScript checker
+pnpm build                             # Build for production
 
 # Development
-npm run dev                            # Start dev server (with validation)
-npm run db:studio                      # Open Prisma Studio
-npm run db:generate                    # Generate Prisma client
-npm run db:push                        # Push schema to database
+pnpm dev                               # Start dev server
+pnpm db:studio                         # Open Prisma Studio
+pnpm db:generate                       # Generate Prisma client
+pnpm db:push                           # Push schema to database
 ```
 
 ### Git Commands
@@ -562,11 +595,13 @@ git push                               # Triggers automatic Vercel deployment
 ## Documentation & References
 
 ### Internal Docs
+
 - `DEPLOYMENT_REPORT.md` - How the app was fixed and deployed
 - `IMPROVEMENTS.md` - Recommended code improvements
 - `README.md` - Project overview and setup instructions
 
 ### External Resources
+
 - [Vercel Docs](https://vercel.com/docs)
 - [Next.js Docs](https://nextjs.org/docs)
 - [Prisma Docs](https://www.prisma.io/docs)
@@ -584,25 +619,30 @@ git push                               # Triggers automatic Vercel deployment
 ## Maintenance Calendar
 
 ### Daily
+
 - Check Vercel dashboard for errors
 - Monitor error logs
 
 ### Weekly
+
 - Run `npm audit`
 - Check TMDB API status
 - Monitor database performance
 
 ### Monthly
+
 - Update dependencies (`pnpm update`)
 - Review security advisories
 - Analyze performance metrics
 
 ### Quarterly
+
 - Full security review
 - Database backup testing
 - Performance optimization review
 
 ### Annually
+
 - Renewal of API keys/tokens
 - Full infrastructure review
 - Architecture optimization
@@ -617,7 +657,7 @@ When something breaks:
 - [ ] Check TMDB API status
 - [ ] Check database connectivity
 - [ ] Review application error logs
-- [ ] Test locally with `npm run dev`
+- [ ] Test locally with `pnpm dev`
 - [ ] Check environment variables are set
 - [ ] Review git diff for recent changes
 - [ ] Check browser console (F12 > Console)
@@ -631,6 +671,7 @@ When something breaks:
 ## Support Contact
 
 For critical issues:
+
 1. Check this guide first
 2. Check relevant documentation
 3. Contact service providers (Vercel, Neon, TMDB)

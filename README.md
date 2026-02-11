@@ -6,10 +6,11 @@ Una aplicación web para gestionar y hacer seguimiento de películas, construida
 
 ### 🗄️ Configuración Neon
 
-- **Proyecto:** `movies-tracker` (ID: `billowing-grass-71670123`)
+- **Proyecto Neon:** `neon-indigo-kite` (ID: `wispy-poetry-52762475`)
 - **Base de datos:** `neondb`
 - **Esquema principal:** `movies_tracker_app_2` ✅
 - **Versión PostgreSQL:** 17
+- **Rama:** `main` (endpoint: `ep-aged-night-ab7l7nwr.eu-west-2.aws.neon.tech`)
 
 ### 📊 Tablas del Esquema `movies_tracker_app_2`
 
