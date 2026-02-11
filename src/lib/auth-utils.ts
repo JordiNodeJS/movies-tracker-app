@@ -1,9 +1,21 @@
 import { randomBytes, scrypt, timingSafeEqual } from "crypto";
 import { SignJWT, jwtVerify, type JWTPayload } from "jose";
 
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "your-super-secret-key-change-in-production"
-);
+const JWT_SECRET_RAW =
+  process.env.JWT_SECRET || "your-super-secret-key-change-in-production";
+
+if (
+  process.env.NODE_ENV === "production" &&
+  JWT_SECRET_RAW === "your-super-secret-key-change-in-production"
+) {
+  console.error(
+    "❌ CRITICAL: JWT_SECRET is using the default development value in production! " +
+      "Please set a secure random JWT_SECRET in your environment variables.",
+  );
+  throw new Error("Insecure JWT_SECRET in production");
+}
+
+const JWT_SECRET = new TextEncoder().encode(JWT_SECRET_RAW);
 const JWT_ALGORITHM = "HS256";
 const TOKEN_EXPIRY = "7d";
 

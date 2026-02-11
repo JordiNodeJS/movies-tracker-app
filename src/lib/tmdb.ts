@@ -5,6 +5,18 @@ const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 
 const ACCESS_TOKEN = process.env.TMDB_ACCESS_TOKEN?.trim();
 
+if (!ACCESS_TOKEN) {
+  console.error(
+    "❌ CRITICAL: TMDB_ACCESS_TOKEN environment variable is not set. " +
+      "The application cannot fetch movie data. " +
+      "Please configure this variable in your .env file or Vercel dashboard.",
+  );
+
+  if (process.env.NODE_ENV === "production") {
+    throw new Error("Missing required environment variable: TMDB_ACCESS_TOKEN");
+  }
+}
+
 // Types
 export interface Movie {
   id: number;

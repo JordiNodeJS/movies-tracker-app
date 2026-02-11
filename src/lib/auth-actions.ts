@@ -51,7 +51,13 @@ export async function register(formData: FormData): Promise<AuthResult> {
     return { success: true };
   } catch (error) {
     console.error("Registration error:", error);
-    return { success: false, error: "Failed to create account" };
+    if (error instanceof Error) {
+      // Handle Prisma errors specifically if needed
+      if (error.message.includes("Prisma")) {
+        return { success: false, error: "Database error during registration" };
+      }
+    }
+    return { success: false, error: "Failed to create account. Please try again later." };
   }
 }
 
@@ -95,7 +101,12 @@ export async function login(formData: FormData): Promise<AuthResult> {
     return { success: true };
   } catch (error) {
     console.error("Login error:", error);
-    return { success: false, error: "Failed to login" };
+    if (error instanceof Error) {
+      if (error.message.includes("Prisma") || error.message.includes("database")) {
+        return { success: false, error: "Database error during login" };
+      }
+    }
+    return { success: false, error: "Failed to login. Please try again later." };
   }
 }
 
